@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Healthcare AI Chatbot</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container py-5">
+    <h2 class="text-center mb-4" style="font-weight:700; color:#1976d2; letter-spacing:1px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/2910/2910796.png" alt="Healthcare Icon" style="width:36px;vertical-align:middle;margin-right:10px;">
+      Healthcare AI Assistant
+    </h2>
+    <div class="chat-box card shadow p-4">
+      <div id="chat-container" class="chat-container mb-3" aria-live="polite" aria-label="Chat messages"></div>
+      <div class="input-group">
+        <input 
+          type="text" 
+          id="user-input" 
+          class="form-control" 
+          placeholder="Describe your symptoms..." 
+          autocomplete="off" 
+          aria-label="Type your message"
+        />
+        <button class="btn btn-primary" onclick="sendMessage()" aria-label="Send message">Send</button>
+      </div>
+    </div>
+  </div>
+  <footer class="text-center mt-4 small text-muted">
+    <img src="https://cdn-icons-png.flaticon.com/512/2910/2910796.png" alt="Healthcare Icon" style="width:24px;vertical-align:middle;margin-right:6px;">
+    This is a prototype. The chatbot does not give medical prescriptions.
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

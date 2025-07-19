@@ -1,0 +1,116 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #e3f0ff 0%, #fce4ec 100%);
+  min-height: 100vh;
+}
+
+h2 {
+  font-weight: 700;
+  color: #1976d2;
+  letter-spacing: 1px;
+}
+
+.chat-box {
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(25, 118, 210, 0.08);
+  padding: 0;
+}
+
+.chat-container {
+  height: 400px;
+  overflow-y: auto;
+  border: 1px solid #e3e3e3;
+  padding: 20px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: #f8f9fa;
+  border-radius: 14px;
+  margin-bottom: 18px;
+}
+
+.chat-message {
+  padding: 12px 20px;
+  border-radius: 22px;
+  max-width: 75%;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.06);
+  word-break: break-word;
+  transition: background 0.2s;
+}
+
+.user {
+  align-self: flex-end;
+  background: linear-gradient(135deg, #1976d2 60%, #64b5f6 100%);
+  color: #fff;
+  border-bottom-right-radius: 6px;
+}
+
+.bot {
+  align-self: flex-start;
+  background: linear-gradient(135deg, #fffde7 60%, #ffe082 100%);
+  color: #333;
+  border-bottom-left-radius: 6px;
+}
+
+.input-group input {
+  border-radius: 18px 0 0 18px;
+  border-right: none;
+  background: #f8f9fa;
+}
+
+.input-group .btn {
+  border-radius: 0 18px 18px 0;
+  font-weight: 600;
+  background: linear-gradient(135deg, #1976d2 60%, #64b5f6 100%);
+  border: none;
+  transition: background 0.2s;
+}
+
+.input-group .btn:hover {
+  background: linear-gradient(135deg, #1565c0 60%, #42a5f5 100%);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #f8f9fa;
+}
+::-webkit-scrollbar-thumb {
+  background: #b3e5fc;
+  border-radius: 8px;
+}
+
+/* Typing indicator animation */
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 48px;
+  background: transparent;
+  box-shadow: none;
+  padding: 0 0 0 8px;
+}
+
+.typing-indicator .dot {
+  width: 8px;
+  height: 8px;
+  background: #ffd54f;
+  border-radius: 50%;
+  display: inline-block;
+  animation: blink 1.2s infinite both;
+}
+
+.typing-indicator .dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.typing-indicator .dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0%, 80%, 100% { opacity: 0.2; }
+  40% { opacity: 1; }
+}
